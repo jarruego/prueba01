@@ -1,8 +1,7 @@
-import { serial, text, pgTable, pgSchema, varchar, integer } from "drizzle-orm/pg-core";
+import { serial, text, pgTable, pgSchema } from "drizzle-orm/pg-core";
 
 export const users = pgTable('users', {
     id: serial().primaryKey(),
-    name: varchar(),
-    age: integer(),
-    lastname: varchar().notNull(),
+    name: text().notNull(),
+    lastname: text().notNull(),
 });
